@@ -24,7 +24,7 @@ self.addEventListener('install', event => {
  
     const cacheInmutable = caches.open(CACHE_INMUTABLE)
     .then( cache => {
-        cache.addAll([
+         cache.addAll([
             'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js',
             'https://code.jquery.com/jquery-3.6.0.slim.js',
             'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
