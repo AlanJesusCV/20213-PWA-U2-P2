@@ -34,8 +34,6 @@ self.addEventListener('install', event => {
     event.waitUntil(Promise.all([cacheStatic, cacheInmutable]))
 });
 
-self.addEventListener('fetch', event => {
-    event.respondWith(
-        caches.match(event.request)
-    );
-});
+self.addEventListener('fetch',(event)=>{
+    event.respondWith(caches.match(event.request));
+})
